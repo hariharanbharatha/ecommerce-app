@@ -12,9 +12,9 @@ pipeline {
     stage('Build & Deploy Containers') {
       steps {
         echo "🐳 Building Docker containers..."
-        sh 'docker-compose down'
-        sh 'docker-compose build'
-        sh 'docker-compose up -d'
+        sh 'docker compose down'
+        sh 'docker compose build'
+        sh 'docker compose up -d'
       }
     }
 
