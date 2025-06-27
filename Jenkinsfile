@@ -2,6 +2,12 @@ pipeline {
   agent any
 
   stages {
+    stage('Clean Workspace') {
+      steps {
+        deleteDir() // 💥 Clears the old workspace
+      }
+    }
+
     stage('Checkout') {
       steps {
         echo "📥 Pulling latest code"
